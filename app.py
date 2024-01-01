@@ -24,7 +24,7 @@ def getWeatherData():
     weather_dtl = requests.get(url,params=weatherInput)    
     weather_json = weather_dtl.json()
     city = weather_json['name']
-    return f"{weather_json}" , city
+    return f"{weather_json},{city}"
 
 
 if __name__ == '__main__':
