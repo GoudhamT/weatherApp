@@ -21,10 +21,10 @@ def getWeatherData():
         'units': request.form.get('units')
     }
 
-    weather_dtl = requests.get(url,params=weatherInput)
-    city = weather_json['name']
+    weather_dtl = requests.get(url,params=weatherInput)    
     weather_json = weather_dtl.json()
-    return f"{weather_json}"
+    city = weather_json['name']
+    return f"{weather_json}" , city
 
 
 if __name__ == '__main__':
