@@ -22,6 +22,7 @@ def getWeatherData():
     }
 
     weather_dtl = requests.get(url,params=weatherInput)
+    city = weather_json['name']
     weather_json = weather_dtl.json()
     return f"{weather_json}"
 
